@@ -7,11 +7,11 @@ Inspired by the [Prev / Next Button Strapi 4 plugin](https://github.com/DalerLeo
 
 NPM:
 
-> `npm install @cslegany/strapi5-prev-next-button`
+> `npm install @cslegany/prev-next-button-strapi5`
 
 Yarn:
 
-> `yarn add @cslegany/strapi5-prev-next-button`
+> `yarn add @cslegany/prev-next-button-strapi5`
 
 ## Usage
 - Simply install and use it in Content Manager on Collection Types in Edit Mode.
