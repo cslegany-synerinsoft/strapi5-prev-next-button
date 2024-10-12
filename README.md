@@ -1,4 +1,4 @@
-# filter-button
+# prev-next-button
 > This package adds Prev / Next Buttons to the Edit View of Content Manager in Strapi 5
 
 Inspired by the [Prev / Next Button Strapi 4 plugin](https://github.com/DalerLeo/strapi-plugin-prev-next-button).
