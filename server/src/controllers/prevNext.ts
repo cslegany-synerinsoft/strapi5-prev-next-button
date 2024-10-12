@@ -4,7 +4,7 @@ import isNumber from 'lodash/isNumber';
 export default ({ strapi }: { strapi: Core.Strapi }) => ({
 
   async welcome(ctx) {
-    const prevNextService = strapi.plugin("strapi5-prev-next-button").service("prevNext");
+    const prevNextService = strapi.plugin("prev-next-button").service("prevNext");
 
     try {
       ctx.body = await prevNextService.getWelcomeMessage();
@@ -20,7 +20,7 @@ export default ({ strapi }: { strapi: Core.Strapi }) => ({
       ctx.throw(400, 'uid and id are required');
     }
 
-    const prevNextService = strapi.plugin("strapi5-prev-next-button").service("prevNext");
+    const prevNextService = strapi.plugin("prev-next-button").service("prevNext");
 
     const prevNextItems = await prevNextService.getPrevNextItems(ctx.params.uid, ctx.params.id);
       ctx.type = 'application/json; charset=utf-8';

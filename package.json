@@ -1,5 +1,5 @@
 {
-  "name": "@cslegany/strapi5-prev-next-button",
+  "name": "@cslegany/prev-next-button-strapi5",
   "version": "0.5.1",
   "description": "This package adds Prev / Next Buttons to the Edit View of Content Manager in Strapi 5",
   "strapi": {
@@ -8,20 +8,21 @@
     "displayName": "Prev / Next Buttons",
     "description": "Prev / Next Buttons in Edit View of Content Manager"
   },
-  "keywords": ["Prev / Next Buttons", "Strapi 5"],
+  "keywords": [
+    "Prev / Next Buttons",
+    "Strapi 5"
+  ],
   "license": "MIT",
   "type": "commonjs",
   "exports": {
     "./package.json": "./package.json",
     "./strapi-admin": {
-      "types": "./dist/admin/src/index.d.ts",
       "source": "./admin/src/index.ts",
       "import": "./dist/admin/index.mjs",
       "require": "./dist/admin/index.js",
       "default": "./dist/admin/index.js"
     },
     "./strapi-server": {
-      "types": "./dist/server/src/index.d.ts",
       "source": "./server/src/index.ts",
       "import": "./dist/server/index.mjs",
       "require": "./dist/server/index.js",
