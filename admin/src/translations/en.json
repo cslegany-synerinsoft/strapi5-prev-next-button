@@ -1,0 +1,6 @@
+{
+    "plugin.name": "Prev/Next buttons",
+    "plugin.label": "Prev/Next buttons",
+    "plugin.description": "Prev/Next buttons in Edit view",
+    "plugin.prev-next-label": "Prev / Next"
+}
