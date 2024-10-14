@@ -12,6 +12,7 @@ import { useIntl } from "react-intl";
 import { getTranslation as getTrad } from '../utils/getTranslation';
 import { useFetchClient } from '@strapi/admin/strapi-admin';
 import { PLUGIN_ID } from "../pluginId";
+import TooltipIconButton from "./TooltipIconButton";
 
 type PrevNext = {
     prev: {
@@ -28,6 +29,7 @@ type PrevNext = {
 
 const PrevNextButton = () => {
     const { formatMessage } = useIntl();
+
     const { isSingleType, isCreatingEntry, contentType } = useContentManagerContext();
     const uid = contentType?.uid ?? "";
 
@@ -79,21 +81,23 @@ const PrevNextButton = () => {
     return (
         <Box paddingBottom={2} paddingTop={2} width={'100%'}>
             <Flex background="neutral100" justifyContent="space-between">
-                <IconButton
-                    withTooltip={false} variant="secondary"
+                <TooltipIconButton
+                    variant="secondary"
                     disabled={!prevNext.prev}
                     onClick={onPrev}
-                    label={prevNext.prev?.label}>
+                    label={prevNext.prev?.label}
+                    showBorder={true}>
                     <ArrowLeft />
-                </IconButton>
+                </TooltipIconButton>
                 <Typography>{formatMessage({ id: getTrad("plugin.prev-next-label") })}</Typography>
-                <IconButton
-                    withTooltip={false} variant="secondary"
+                <TooltipIconButton
+                    variant="secondary"
                     disabled={!prevNext.next}
                     onClick={onNext}
-                    label={prevNext.next?.label}>
+                    label={prevNext.next?.label}
+                    showBorder={true}>
                     <ArrowRight />
-                </IconButton>
+                </TooltipIconButton>
             </Flex>
         </Box>
     );
